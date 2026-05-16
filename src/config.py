@@ -621,8 +621,8 @@ class Config:
     - 类方法 get_instance() 实现单例访问
     """
     
-    # === 自选股配置 ===
-    # === 自选股配置（台股 AI 與電力供應鏈熱門股） ===
+
+    # === 自選股配置（台股 AI 與電力供應鏈熱門股） ===
     stock_list: List[str] = field(default_factory=lambda: [
     # --- AI 概念股（伺服器、代工、散熱、IP） ---
     "2330.TW",  # 台積電（AI晶片核心、護國神山）
