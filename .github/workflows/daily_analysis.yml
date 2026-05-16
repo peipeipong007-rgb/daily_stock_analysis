@@ -339,12 +339,12 @@ jobs:
           NOTIFICATION_MIN_SEVERITY: ${{ vars.NOTIFICATION_MIN_SEVERITY || secrets.NOTIFICATION_MIN_SEVERITY }}
           NOTIFICATION_DAILY_DIGEST_ENABLED: ${{ vars.NOTIFICATION_DAILY_DIGEST_ENABLED || secrets.NOTIFICATION_DAILY_DIGEST_ENABLED || 'false' }}
 
-          # ==========================================
+         # ==========================================
           # 自选股配置
           # ==========================================
-          STOCK_LIST: ${{ vars.STOCK_LIST || secrets.STOCK_LIST || '600519' }}
-          MARKET_REVIEW_REGION: ${{ vars.MARKET_REVIEW_REGION || secrets.MARKET_REVIEW_REGION || 'cn' }}
-          MARKET_REVIEW_COLOR_SCHEME: ${{ vars.MARKET_REVIEW_COLOR_SCHEME || secrets.MARKET_REVIEW_COLOR_SCHEME || 'green_up' }}
+          STOCK_LIST: ${{ vars.STOCK_LIST || secrets.STOCK_LIST || '2330.TW,2317.TW,2382.TW,3231.TW,3017.TW,3324.TW,3661.TW,1519.TW,1503.TW,1513.TW,1514.TW,1605.TW,2308.TW,6806.TW' }}
+          MARKET_REVIEW_REGION: ${{ vars.MARKET_REVIEW_REGION || secrets.MARKET_REVIEW_REGION || 'tw' }}
+          MARKET_REVIEW_COLOR_SCHEME: ${{ vars.MARKET_REVIEW_COLOR_SCHEME || secrets.MARKET_REVIEW_COLOR_SCHEME || 'red_up' }}
           
           # ==========================================
           # 运行配置 ⬅️ 新增！
