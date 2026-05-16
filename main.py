@@ -469,9 +469,19 @@ def run_full_analysis(
 
         # Issue #373: Trading day filter (per-stock, per-market)
         effective_codes = stock_codes if stock_codes is not None else config.stock_list
+        
+        # ─── 🇹🇼 台灣台股強制外掛開始（請把這段塞在有效代碼的下方） ───
+        effective_codes = [
+            "2330.TW", "2317.TW", "2382.TW", "3231.TW", "3017.TW", "3324.TW", "3661.TW",
+            "1519.TW", "1503.TW", "1513.TW", "1514.TW", "1605.TW", "2308.TW", "6806.TW"
+        ]
+        config.market_review_region = 'global' 
+        # ─── 🇹🇼 台灣台股強制外掛結束 ───
+        
         filtered_codes, effective_region, should_skip = _compute_trading_day_filter(
             config, args, effective_codes
         )
+
         if should_skip:
             logger.info(
                 "今日所有相关市场均为非交易日，跳过执行。可使用 --force-run 强制执行。"
